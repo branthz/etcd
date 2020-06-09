@@ -20,18 +20,18 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/coreos/pkg/capnslog"
+	"github.com/branthz/pkg/capnslog"
 
-	"github.com/coreos/etcd/pkg/logger"
+	"github.com/branthz/etcd/pkg/logger"
 )
 
 func TestPackageLogger(t *testing.T) {
 	buf := new(bytes.Buffer)
 	capnslog.SetFormatter(capnslog.NewDefaultFormatter(buf))
 
-	l := logger.NewPackageLogger("github.com/coreos/etcd", "logger")
+	l := logger.NewPackageLogger("github.com/branthz/etcd", "logger")
 
-	r := capnslog.MustRepoLogger("github.com/coreos/etcd")
+	r := capnslog.MustRepoLogger("github.com/branthz/etcd")
 	r.SetLogLevel(map[string]capnslog.LogLevel{"logger": capnslog.INFO})
 
 	l.Infof("hello world!")

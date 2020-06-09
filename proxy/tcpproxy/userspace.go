@@ -22,11 +22,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/coreos/pkg/capnslog"
+	"github.com/branthz/pkg/capnslog"
 )
 
 var (
-	plog = capnslog.NewPackageLogger("github.com/coreos/etcd", "proxy/tcpproxy")
+	plog = capnslog.NewPackageLogger("github.com/branthz/etcd", "proxy/tcpproxy")
 )
 
 type remote struct {

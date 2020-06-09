@@ -22,8 +22,8 @@ import (
 	"strings"
 	"time"
 
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/tools/functional-tester/etcd-agent/client"
+	pb "github.com/branthz/etcd/etcdserver/etcdserverpb"
+	"github.com/branthz/etcd/tools/functional-tester/etcd-agent/client"
 
 	"google.golang.org/grpc"
 )
@@ -105,7 +105,7 @@ func (c *cluster) WaitHealth() error {
 	// wait 60s to check cluster health.
 	// TODO: set it to a reasonable value. It is set that high because
 	// follower may use long time to catch up the leader when reboot under
-	// reasonable workload (https://github.com/coreos/etcd/issues/2698)
+	// reasonable workload (https://github.com/branthz/etcd/issues/2698)
 	for i := 0; i < 60; i++ {
 		for _, m := range c.Members {
 			if err = m.SetHealthKeyV3(); err != nil {

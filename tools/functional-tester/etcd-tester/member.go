@@ -21,9 +21,9 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/coreos/etcd/clientv3"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/tools/functional-tester/etcd-agent/client"
+	"github.com/branthz/etcd/clientv3"
+	pb "github.com/branthz/etcd/etcdserver/etcdserverpb"
+	"github.com/branthz/etcd/tools/functional-tester/etcd-agent/client"
 
 	"google.golang.org/grpc"
 )

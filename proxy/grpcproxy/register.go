@@ -18,9 +18,9 @@ import (
 	"encoding/json"
 	"os"
 
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/clientv3/concurrency"
-	"github.com/coreos/etcd/clientv3/naming"
+	"github.com/branthz/etcd/clientv3"
+	"github.com/branthz/etcd/clientv3/concurrency"
+	"github.com/branthz/etcd/clientv3/naming"
 
 	"golang.org/x/time/rate"
 	gnaming "google.golang.org/grpc/naming"

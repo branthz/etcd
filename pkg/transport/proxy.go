@@ -234,8 +234,8 @@ func (p *proxy) To() string {
 
 // TODO: implement packet reordering from multiple TCP connections
 // buffer packets per connection for awhile, reorder before transmit
-// - https://github.com/coreos/etcd/issues/5614
-// - https://github.com/coreos/etcd/pull/6918#issuecomment-264093034
+// - https://github.com/branthz/etcd/issues/5614
+// - https://github.com/branthz/etcd/pull/6918#issuecomment-264093034
 
 func (p *proxy) listenAndServe() {
 	defer p.closeWg.Done()

@@ -22,12 +22,12 @@ import (
 	"os"
 	"strings"
 
-	"github.com/coreos/pkg/capnslog"
+	"github.com/branthz/pkg/capnslog"
 	"github.com/spf13/pflag"
 )
 
 var (
-	plog = capnslog.NewPackageLogger("github.com/coreos/etcd", "pkg/flags")
+	plog = capnslog.NewPackageLogger("github.com/branthz/etcd", "pkg/flags")
 )
 
 // DeprecatedFlag encapsulates a flag that may have been previously valid but

@@ -22,8 +22,8 @@ import (
 	"strings"
 
 	"github.com/bgentry/speakeasy"
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/pkg/report"
+	"github.com/branthz/etcd/clientv3"
+	"github.com/branthz/etcd/pkg/report"
 	"google.golang.org/grpc/grpclog"
 )
 

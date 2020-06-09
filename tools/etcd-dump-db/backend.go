@@ -19,11 +19,11 @@ import (
 	"fmt"
 	"path/filepath"
 
-	bolt "github.com/coreos/bbolt"
-	"github.com/coreos/etcd/internal/lease/leasepb"
-	"github.com/coreos/etcd/internal/mvcc"
-	"github.com/coreos/etcd/internal/mvcc/backend"
-	"github.com/coreos/etcd/internal/mvcc/mvccpb"
+	bolt "github.com/branthz/bbolt"
+	"github.com/branthz/etcd/internal/lease/leasepb"
+	"github.com/branthz/etcd/internal/mvcc"
+	"github.com/branthz/etcd/internal/mvcc/backend"
+	"github.com/branthz/etcd/internal/mvcc/mvccpb"
 )
 
 func snapDir(dataDir string) string {
@@ -110,7 +110,7 @@ func iterateBucket(dbPath, bucket string, limit uint64, decode bool) (err error)
 		// iterate in reverse order (use First() and Next() for ascending order)
 		for k, v := c.Last(); k != nil; k, v = c.Prev() {
 			// TODO: remove sensitive information
-			// (https://github.com/coreos/etcd/issues/7620)
+			// (https://github.com/branthz/etcd/issues/7620)
 			if dec, ok := decoders[bucket]; decode && ok {
 				dec(k, v)
 			} else {

@@ -15,10 +15,10 @@
 // Package pbutil defines interfaces for handling Protocol Buffer objects.
 package pbutil
 
-import "github.com/coreos/pkg/capnslog"
+import "github.com/branthz/pkg/capnslog"
 
 var (
-	plog = capnslog.NewPackageLogger("github.com/coreos/etcd", "pkg/pbutil")
+	plog = capnslog.NewPackageLogger("github.com/branthz/etcd", "pkg/pbutil")
 )
 
 type Marshaler interface {

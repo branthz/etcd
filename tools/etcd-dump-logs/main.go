@@ -21,13 +21,13 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/internal/raftsnap"
-	"github.com/coreos/etcd/pkg/pbutil"
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/raft/raftpb"
-	"github.com/coreos/etcd/wal"
-	"github.com/coreos/etcd/wal/walpb"
+	"github.com/branthz/etcd/etcdserver/etcdserverpb"
+	"github.com/branthz/etcd/internal/raftsnap"
+	"github.com/branthz/etcd/pkg/pbutil"
+	"github.com/branthz/etcd/pkg/types"
+	"github.com/branthz/etcd/raft/raftpb"
+	"github.com/branthz/etcd/wal"
+	"github.com/branthz/etcd/wal/walpb"
 )
 
 func main() {
@@ -107,7 +107,7 @@ func main() {
 			}
 
 			// TODO: remove sensitive information
-			// (https://github.com/coreos/etcd/issues/7620)
+			// (https://github.com/branthz/etcd/issues/7620)
 			var r etcdserverpb.Request
 			if err := r.Unmarshal(e.Data); err == nil {
 				switch r.Method {

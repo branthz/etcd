@@ -17,10 +17,10 @@ package grpcproxy
 import (
 	"time"
 
-	"github.com/coreos/etcd/clientv3"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/internal/mvcc"
-	"github.com/coreos/etcd/internal/mvcc/mvccpb"
+	"github.com/branthz/etcd/clientv3"
+	pb "github.com/branthz/etcd/etcdserver/etcdserverpb"
+	"github.com/branthz/etcd/internal/mvcc"
+	"github.com/branthz/etcd/internal/mvcc/mvccpb"
 )
 
 type watchRange struct {
