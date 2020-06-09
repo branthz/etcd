@@ -21,9 +21,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/etcd/internal/version"
-	"github.com/coreos/etcd/pkg/fileutil"
-	"github.com/coreos/etcd/pkg/testutil"
+	"github.com/branthz/etcd/internal/version"
+	"github.com/branthz/etcd/pkg/fileutil"
+	"github.com/branthz/etcd/pkg/testutil"
 )
 
 // TestReleaseUpgrade ensures that changes to master branch does not affect

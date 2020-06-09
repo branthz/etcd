@@ -15,14 +15,14 @@ ExecStartPre=/usr/bin/touch ${ETCD_BACKUP_DIR}/member/snap/iamhere.txt
 # Copy the last backup, in case the new upload gets corrupted
 ExecStartPre=-/usr/bin/docker run --rm \
 			      -v ${RCLONE_CONFIG_PATH}:/etc/rclone.conf \
-			      quay.io/coreos/rclone:latest --config /etc/rclone.conf --checksum=${RCLONE_CHECKSUM} \
+			      quay.io/branthz/rclone:latest --config /etc/rclone.conf --checksum=${RCLONE_CHECKSUM} \
 			      copy ${RCLONE_ENDPOINT}/%m ${RCLONE_ENDPOINT}/%m_backup
 
 # Upload new backup
 ExecStart=/usr/bin/docker run --rm \
 			  -v ${ETCD_BACKUP_DIR}:/etcd2backup \
 			  -v ${RCLONE_CONFIG_PATH}:/etc/rclone.conf \
-			  quay.io/coreos/rclone:latest --config ${RCLONE_CONFIG_PATH} --checksum=${RCLONE_CHECKSUM} \
+			  quay.io/branthz/rclone:latest --config ${RCLONE_CONFIG_PATH} --checksum=${RCLONE_CHECKSUM} \
 			  copy /etcd2backup/ ${RCLONE_ENDPOINT}/%m/
 
 [Install]

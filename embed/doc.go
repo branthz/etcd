@@ -21,7 +21,7 @@ Launch an embedded etcd server using the configuration defaults:
 		"log"
 		"time"
 
-		"github.com/coreos/etcd/embed"
+		"github.com/branthz/etcd/embed"
 	)
 
 	func main() {

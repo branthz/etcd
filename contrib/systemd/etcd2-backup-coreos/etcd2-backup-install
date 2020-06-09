@@ -5,7 +5,7 @@ if [ ! -f /etc/os-release ];then
     exit 1
 fi
 . /etc/os-release
-if [ ! "$ID" == "coreos" ];then
+if [ ! "$ID" == "branthz" ];then
     echo "os-release error: Detected ID=$ID: this is not CoreOS Linux"
     exit 1
 fi

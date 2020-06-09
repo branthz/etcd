@@ -10,7 +10,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/coreos/etcd/pkg/testutil"
+	"github.com/branthz/etcd/pkg/testutil"
 )
 
 var (

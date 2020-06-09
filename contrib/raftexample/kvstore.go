@@ -21,7 +21,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/coreos/etcd/internal/raftsnap"
+	"github.com/branthz/etcd/internal/raftsnap"
 )
 
 // a key-value store backed by raft

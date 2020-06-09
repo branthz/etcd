@@ -23,10 +23,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/internal/mvcc/mvccpb"
+	"github.com/branthz/etcd/clientv3"
+	"github.com/branthz/etcd/internal/mvcc/mvccpb"
 
-	bolt "github.com/coreos/bbolt"
+	bolt "github.com/branthz/bbolt"
 )
 
 // TODO: test with embedded etcd in integration package

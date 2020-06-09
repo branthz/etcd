@@ -18,8 +18,8 @@ import (
 	"context"
 	"fmt"
 
-	v3 "github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/internal/mvcc/mvccpb"
+	v3 "github.com/branthz/etcd/clientv3"
+	"github.com/branthz/etcd/internal/mvcc/mvccpb"
 )
 
 // PriorityQueue implements a multi-reader, multi-writer distributed queue.

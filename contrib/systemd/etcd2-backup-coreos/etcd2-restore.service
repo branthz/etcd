@@ -13,7 +13,7 @@ ExecStartPre=/usr/bin/rm -rf ${ETCD_RESTORE_DIR}/member
 ExecStartPre=/usr/bin/docker run --rm \
 			     -v ${RCLONE_CONFIG_PATH}:/etc/rclone.conf \
 			     -v ${ETCD_RESTORE_DIR}:/etcd2backup \
-			     quay.io/coreos/rclone:latest \
+			     quay.io/branthz/rclone:latest \
 			        --config /etc/rclone.conf --checksum=${RCLONE_CHECKSUM} \
 				   copy ${RCLONE_ENDPOINT}/%m /etcd2backup
 

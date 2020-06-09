@@ -1,4 +1,4 @@
-# etcd2-backup-coreos
+# etcd2-backup-branthz
 
 Remote backup and multi-node restore services for etcd2 clusters on CoreOS Linux.
 
