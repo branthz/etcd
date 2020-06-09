@@ -19,11 +19,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/coreos/etcd/etcdserver"
-	"github.com/coreos/etcd/etcdserver/api"
-	"github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes"
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/raft"
+	"github.com/branthz/etcd/etcdserver"
+	"github.com/branthz/etcd/etcdserver/api"
+	"github.com/branthz/etcd/etcdserver/api/v3rpc/rpctypes"
+	"github.com/branthz/etcd/pkg/types"
+	"github.com/branthz/etcd/raft"
 
 	prometheus "github.com/grpc-ecosystem/go-grpc-prometheus"
 	"google.golang.org/grpc"

@@ -19,14 +19,14 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/etcdserver"
-	"github.com/coreos/etcd/etcdserver/api"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/etcdserver/membership"
-	"github.com/coreos/etcd/pkg/types"
+	"github.com/branthz/etcd/clientv3"
+	"github.com/branthz/etcd/etcdserver"
+	"github.com/branthz/etcd/etcdserver/api"
+	pb "github.com/branthz/etcd/etcdserver/etcdserverpb"
+	"github.com/branthz/etcd/etcdserver/membership"
+	"github.com/branthz/etcd/pkg/types"
 
-	"github.com/coreos/go-semver/semver"
+	"github.com/branthz/go-semver/semver"
 )
 
 type fakeStats struct{}

@@ -24,8 +24,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/embed"
+	"github.com/branthz/etcd/clientv3"
+	"github.com/branthz/etcd/embed"
 )
 
 func TestEmbedEtcd(t *testing.T) {

@@ -19,7 +19,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/coreos/etcd/pkg/transport"
+	"github.com/branthz/etcd/pkg/transport"
 )
 
 // copyTLSFiles clones certs files to dst directory.

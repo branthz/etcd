@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/coreos/etcd/etcdserver/membership"
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/rafthttp"
+	"github.com/branthz/etcd/etcdserver/membership"
+	"github.com/branthz/etcd/pkg/types"
+	"github.com/branthz/etcd/rafthttp"
 )
 
 // isConnectedToQuorumSince checks whether the local member is connected to the

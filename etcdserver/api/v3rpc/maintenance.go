@@ -19,15 +19,15 @@ import (
 	"crypto/sha256"
 	"io"
 
-	"github.com/coreos/etcd/etcdserver"
-	"github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/internal/auth"
-	"github.com/coreos/etcd/internal/mvcc"
-	"github.com/coreos/etcd/internal/mvcc/backend"
-	"github.com/coreos/etcd/internal/version"
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/raft"
+	"github.com/branthz/etcd/etcdserver"
+	"github.com/branthz/etcd/etcdserver/api/v3rpc/rpctypes"
+	pb "github.com/branthz/etcd/etcdserver/etcdserverpb"
+	"github.com/branthz/etcd/internal/auth"
+	"github.com/branthz/etcd/internal/mvcc"
+	"github.com/branthz/etcd/internal/mvcc/backend"
+	"github.com/branthz/etcd/internal/version"
+	"github.com/branthz/etcd/pkg/types"
+	"github.com/branthz/etcd/raft"
 )
 
 type KVGetter interface {

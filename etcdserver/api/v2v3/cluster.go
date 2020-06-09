@@ -15,10 +15,10 @@
 package v2v3
 
 import (
-	"github.com/coreos/etcd/etcdserver/membership"
-	"github.com/coreos/etcd/pkg/types"
+	"github.com/branthz/etcd/etcdserver/membership"
+	"github.com/branthz/etcd/pkg/types"
 
-	"github.com/coreos/go-semver/semver"
+	"github.com/branthz/go-semver/semver"
 )
 
 func (s *v2v3Server) ID() types.ID {

@@ -27,15 +27,15 @@ import (
 	"sync"
 	"time"
 
-	"github.com/coreos/etcd/internal/mvcc/backend"
-	"github.com/coreos/etcd/internal/store"
-	"github.com/coreos/etcd/internal/version"
-	"github.com/coreos/etcd/pkg/netutil"
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/raft"
-	"github.com/coreos/etcd/raft/raftpb"
+	"github.com/branthz/etcd/internal/mvcc/backend"
+	"github.com/branthz/etcd/internal/store"
+	"github.com/branthz/etcd/internal/version"
+	"github.com/branthz/etcd/pkg/netutil"
+	"github.com/branthz/etcd/pkg/types"
+	"github.com/branthz/etcd/raft"
+	"github.com/branthz/etcd/raft/raftpb"
 
-	"github.com/coreos/go-semver/semver"
+	"github.com/branthz/go-semver/semver"
 )
 
 // RaftCluster is a list of Members that belong to the same raft cluster
@@ -392,7 +392,7 @@ func (c *RaftCluster) IsReadyToAddNewMember() bool {
 
 	if nstarted == 1 && nmembers == 2 {
 		// a case of adding a new node to 1-member cluster for restoring cluster data
-		// https://github.com/coreos/etcd/blob/master/Documentation/v2/admin_guide.md#restoring-the-cluster
+		// https://github.com/branthz/etcd/blob/master/Documentation/v2/admin_guide.md#restoring-the-cluster
 
 		plog.Debugf("The number of started member is 1. This cluster can accept add member request.")
 		return true

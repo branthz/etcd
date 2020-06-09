@@ -23,11 +23,11 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/coreos/etcd/etcdserver/membership"
-	"github.com/coreos/etcd/pkg/testutil"
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/rafthttp"
-	"github.com/coreos/go-semver/semver"
+	"github.com/branthz/etcd/etcdserver/membership"
+	"github.com/branthz/etcd/pkg/testutil"
+	"github.com/branthz/etcd/pkg/types"
+	"github.com/branthz/etcd/rafthttp"
+	"github.com/branthz/go-semver/semver"
 )
 
 type fakeCluster struct {

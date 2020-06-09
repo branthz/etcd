@@ -21,8 +21,8 @@ import (
 	"os"
 	"sync"
 
-	"github.com/coreos/etcd/etcdserver"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
+	"github.com/branthz/etcd/etcdserver"
+	pb "github.com/branthz/etcd/etcdserver/etcdserverpb"
 
 	"github.com/grpc-ecosystem/go-grpc-prometheus"
 	"google.golang.org/grpc"

@@ -127,7 +127,7 @@ Cherry pick of ${PULLSUBJ} on ${rel}.
 $(printf '%s\n' "${SUBJECTS[@]}")
 EOF
 
-  hub pull-request -F "${prtext}" -h "${GITHUB_USER}:${NEWBRANCH}" -b "coreos:${rel}"
+  hub pull-request -F "${prtext}" -h "${GITHUB_USER}:${NEWBRANCH}" -b "branthz:${rel}"
 }
 
 git checkout -b "${NEWBRANCHUNIQ}" "${BRANCH}"
@@ -136,7 +136,7 @@ cleanbranch="${NEWBRANCHUNIQ}"
 gitamcleanup=true
 for pull in "${PULLS[@]}"; do
   echo "+++ Downloading patch to /tmp/${pull}.patch (in case you need to do this again)"
-  curl -o "/tmp/${pull}.patch" -sSL "http://github.com/coreos/etcd/pull/${pull}.patch"
+  curl -o "/tmp/${pull}.patch" -sSL "http://github.com/branthz/etcd/pull/${pull}.patch"
   echo
   echo "+++ About to attempt cherry pick of PR. To reattempt:"
   echo "  $ git am -3 /tmp/${pull}.patch"

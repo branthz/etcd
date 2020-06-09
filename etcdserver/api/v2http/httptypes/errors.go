@@ -18,11 +18,11 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/coreos/pkg/capnslog"
+	"github.com/branthz/pkg/capnslog"
 )
 
 var (
-	plog = capnslog.NewPackageLogger("github.com/coreos/etcd", "etcdserver/api/v2http/httptypes")
+	plog = capnslog.NewPackageLogger("github.com/branthz/etcd", "etcdserver/api/v2http/httptypes")
 )
 
 type HTTPError struct {

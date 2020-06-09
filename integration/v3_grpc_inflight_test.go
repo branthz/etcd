@@ -20,9 +20,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/pkg/testutil"
+	"github.com/branthz/etcd/etcdserver/api/v3rpc/rpctypes"
+	pb "github.com/branthz/etcd/etcdserver/etcdserverpb"
+	"github.com/branthz/etcd/pkg/testutil"
 
 	"google.golang.org/grpc"
 )
@@ -58,7 +58,7 @@ func TestV3MaintenanceDefragmentInflightRange(t *testing.T) {
 // TestV3KVInflightRangeRequests ensures that inflight requests
 // (sent before server shutdown) are gracefully handled by server-side.
 // They are either finished or canceled, but never crash the backend.
-// See https://github.com/coreos/etcd/issues/7322 for more detail.
+// See https://github.com/branthz/etcd/issues/7322 for more detail.
 func TestV3KVInflightRangeRequests(t *testing.T) {
 	defer testutil.AfterTest(t)
 	clus := NewClusterV3(t, &ClusterConfig{Size: 1})

@@ -29,36 +29,36 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/coreos/etcd/etcdserver/api"
-	"github.com/coreos/etcd/etcdserver/api/v2http/httptypes"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/etcdserver/membership"
-	"github.com/coreos/etcd/etcdserver/stats"
-	"github.com/coreos/etcd/internal/alarm"
-	"github.com/coreos/etcd/internal/auth"
-	"github.com/coreos/etcd/internal/compactor"
-	"github.com/coreos/etcd/internal/discovery"
-	"github.com/coreos/etcd/internal/lease"
-	"github.com/coreos/etcd/internal/lease/leasehttp"
-	"github.com/coreos/etcd/internal/mvcc"
-	"github.com/coreos/etcd/internal/mvcc/backend"
-	"github.com/coreos/etcd/internal/raftsnap"
-	"github.com/coreos/etcd/internal/store"
-	"github.com/coreos/etcd/internal/version"
-	"github.com/coreos/etcd/pkg/fileutil"
-	"github.com/coreos/etcd/pkg/idutil"
-	"github.com/coreos/etcd/pkg/pbutil"
-	"github.com/coreos/etcd/pkg/runtime"
-	"github.com/coreos/etcd/pkg/schedule"
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/pkg/wait"
-	"github.com/coreos/etcd/raft"
-	"github.com/coreos/etcd/raft/raftpb"
-	"github.com/coreos/etcd/rafthttp"
-	"github.com/coreos/etcd/wal"
+	"github.com/branthz/etcd/etcdserver/api"
+	"github.com/branthz/etcd/etcdserver/api/v2http/httptypes"
+	pb "github.com/branthz/etcd/etcdserver/etcdserverpb"
+	"github.com/branthz/etcd/etcdserver/membership"
+	"github.com/branthz/etcd/etcdserver/stats"
+	"github.com/branthz/etcd/internal/alarm"
+	"github.com/branthz/etcd/internal/auth"
+	"github.com/branthz/etcd/internal/compactor"
+	"github.com/branthz/etcd/internal/discovery"
+	"github.com/branthz/etcd/internal/lease"
+	"github.com/branthz/etcd/internal/lease/leasehttp"
+	"github.com/branthz/etcd/internal/mvcc"
+	"github.com/branthz/etcd/internal/mvcc/backend"
+	"github.com/branthz/etcd/internal/raftsnap"
+	"github.com/branthz/etcd/internal/store"
+	"github.com/branthz/etcd/internal/version"
+	"github.com/branthz/etcd/pkg/fileutil"
+	"github.com/branthz/etcd/pkg/idutil"
+	"github.com/branthz/etcd/pkg/pbutil"
+	"github.com/branthz/etcd/pkg/runtime"
+	"github.com/branthz/etcd/pkg/schedule"
+	"github.com/branthz/etcd/pkg/types"
+	"github.com/branthz/etcd/pkg/wait"
+	"github.com/branthz/etcd/raft"
+	"github.com/branthz/etcd/raft/raftpb"
+	"github.com/branthz/etcd/rafthttp"
+	"github.com/branthz/etcd/wal"
 
-	"github.com/coreos/go-semver/semver"
-	"github.com/coreos/pkg/capnslog"
+	"github.com/branthz/go-semver/semver"
+	"github.com/branthz/pkg/capnslog"
 )
 
 const (
@@ -90,7 +90,7 @@ const (
 )
 
 var (
-	plog = capnslog.NewPackageLogger("github.com/coreos/etcd", "etcdserver")
+	plog = capnslog.NewPackageLogger("github.com/branthz/etcd", "etcdserver")
 
 	storeMemberAttributeRegexp = regexp.MustCompile(path.Join(membership.StoreMembersPrefix, "[[:xdigit:]]{1,16}", "attributes"))
 )
