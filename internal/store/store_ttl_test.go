@@ -18,8 +18,8 @@ import (
 	"testing"
 	"time"
 
-	etcdErr "github.com/coreos/etcd/error"
-	"github.com/coreos/etcd/pkg/testutil"
+	etcdErr "github.com/branthz/etcd/error"
+	"github.com/branthz/etcd/pkg/testutil"
 	"github.com/jonboulle/clockwork"
 )
 

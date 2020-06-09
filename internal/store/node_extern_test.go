@@ -20,7 +20,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/coreos/etcd/pkg/testutil"
+	"github.com/branthz/etcd/pkg/testutil"
 )
 
 func TestNodeExternClone(t *testing.T) {

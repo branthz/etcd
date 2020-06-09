@@ -25,8 +25,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	bolt "github.com/coreos/bbolt"
-	"github.com/coreos/pkg/capnslog"
+	bolt "github.com/branthz/bbolt"
+	"github.com/branthz/pkg/capnslog"
 )
 
 var (
@@ -40,7 +40,7 @@ var (
 	// This only works for linux.
 	initialMmapSize = uint64(10 * 1024 * 1024 * 1024)
 
-	plog = capnslog.NewPackageLogger("github.com/coreos/etcd", "mvcc/backend")
+	plog = capnslog.NewPackageLogger("github.com/branthz/etcd", "mvcc/backend")
 
 	// minSnapshotWarningTimeout is the minimum threshold to trigger a long running snapshot warning.
 	minSnapshotWarningTimeout = time.Duration(30 * time.Second)

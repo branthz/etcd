@@ -26,11 +26,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/etcd/internal/raftsnap"
-	"github.com/coreos/etcd/internal/version"
-	"github.com/coreos/etcd/pkg/pbutil"
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/raft/raftpb"
+	"github.com/branthz/etcd/internal/raftsnap"
+	"github.com/branthz/etcd/internal/version"
+	"github.com/branthz/etcd/pkg/pbutil"
+	"github.com/branthz/etcd/pkg/types"
+	"github.com/branthz/etcd/raft/raftpb"
 )
 
 func TestServeRaftPrefix(t *testing.T) {

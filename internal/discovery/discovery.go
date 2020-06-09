@@ -29,16 +29,16 @@ import (
 	"strings"
 	"time"
 
-	"github.com/coreos/etcd/client"
-	"github.com/coreos/etcd/pkg/transport"
-	"github.com/coreos/etcd/pkg/types"
+	"github.com/branthz/etcd/client"
+	"github.com/branthz/etcd/pkg/transport"
+	"github.com/branthz/etcd/pkg/types"
 
-	"github.com/coreos/pkg/capnslog"
+	"github.com/branthz/pkg/capnslog"
 	"github.com/jonboulle/clockwork"
 )
 
 var (
-	plog = capnslog.NewPackageLogger("github.com/coreos/etcd", "discovery")
+	plog = capnslog.NewPackageLogger("github.com/branthz/etcd", "discovery")
 
 	ErrInvalidURL           = errors.New("discovery: invalid URL")
 	ErrBadSizeKey           = errors.New("discovery: size key is bad")

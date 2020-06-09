@@ -19,7 +19,7 @@ import (
 	"math"
 	"sync"
 
-	bolt "github.com/coreos/bbolt"
+	bolt "github.com/branthz/bbolt"
 )
 
 // safeRangeBucket is a hack to avoid inadvertently reading duplicate keys;

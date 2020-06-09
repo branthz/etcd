@@ -24,9 +24,9 @@ import (
 	"testing"
 	"time"
 
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/internal/auth/authpb"
-	"github.com/coreos/etcd/internal/mvcc/backend"
+	pb "github.com/branthz/etcd/etcdserver/etcdserverpb"
+	"github.com/branthz/etcd/internal/auth/authpb"
+	"github.com/branthz/etcd/internal/mvcc/backend"
 
 	"golang.org/x/crypto/bcrypt"
 	"google.golang.org/grpc/metadata"

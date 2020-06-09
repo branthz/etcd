@@ -23,12 +23,12 @@ import (
 	"path"
 	"strings"
 
-	"github.com/coreos/etcd/internal/raftsnap"
-	"github.com/coreos/etcd/internal/version"
-	pioutil "github.com/coreos/etcd/pkg/ioutil"
-	"github.com/coreos/etcd/pkg/types"
+	"github.com/branthz/etcd/internal/raftsnap"
+	"github.com/branthz/etcd/internal/version"
+	pioutil "github.com/branthz/etcd/pkg/ioutil"
+	"github.com/branthz/etcd/pkg/types"
 
-	"github.com/coreos/etcd/raft/raftpb"
+	"github.com/branthz/etcd/raft/raftpb"
 )
 
 const (

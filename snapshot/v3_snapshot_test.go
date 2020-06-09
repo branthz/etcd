@@ -24,11 +24,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/embed"
-	"github.com/coreos/etcd/pkg/logger"
-	"github.com/coreos/etcd/pkg/testutil"
-	"github.com/coreos/etcd/pkg/types"
+	"github.com/branthz/etcd/clientv3"
+	"github.com/branthz/etcd/embed"
+	"github.com/branthz/etcd/pkg/logger"
+	"github.com/branthz/etcd/pkg/testutil"
+	"github.com/branthz/etcd/pkg/types"
 )
 
 // TestSnapshotV3RestoreSingle tests single node cluster restoring
@@ -51,7 +51,7 @@ func TestSnapshotV3RestoreSingle(t *testing.T) {
 	cfg.InitialCluster = fmt.Sprintf("%s=%s", cfg.Name, pURLs[0].String())
 	cfg.Dir = filepath.Join(os.TempDir(), fmt.Sprint(time.Now().Nanosecond()))
 
-	sp := NewV3(nil, logger.NewPackageLogger("github.com/coreos/etcd", "snapshot"))
+	sp := NewV3(nil, logger.NewPackageLogger("github.com/branthz/etcd", "snapshot"))
 
 	err := sp.Restore(dbPath, RestoreConfig{})
 	if err.Error() != `couldn't find local name "" in the initial cluster configuration` {
@@ -188,7 +188,7 @@ func createSnapshotFile(t *testing.T, kvs []kv) string {
 		}
 	}
 
-	sp := NewV3(cli, logger.NewPackageLogger("github.com/coreos/etcd", "snapshot"))
+	sp := NewV3(cli, logger.NewPackageLogger("github.com/branthz/etcd", "snapshot"))
 	dpPath := filepath.Join(os.TempDir(), fmt.Sprintf("snapshot%d.db", time.Now().Nanosecond()))
 	if err = sp.Save(context.Background(), dpPath); err != nil {
 		t.Fatal(err)
@@ -229,7 +229,7 @@ func restoreCluster(t *testing.T, clusterN int, dbPath string) (
 		cfg.InitialCluster = ics
 		cfg.Dir = filepath.Join(os.TempDir(), fmt.Sprint(time.Now().Nanosecond()+i))
 
-		sp := NewV3(nil, logger.NewPackageLogger("github.com/coreos/etcd", "snapshot"))
+		sp := NewV3(nil, logger.NewPackageLogger("github.com/branthz/etcd", "snapshot"))
 		if err := sp.Restore(dbPath, RestoreConfig{
 			Name:                cfg.Name,
 			OutputDataDir:       cfg.Dir,

@@ -17,8 +17,8 @@ package mvcc
 import (
 	"math"
 
-	"github.com/coreos/etcd/internal/mvcc/mvccpb"
-	"github.com/coreos/etcd/pkg/adt"
+	"github.com/branthz/etcd/internal/mvcc/mvccpb"
+	"github.com/branthz/etcd/pkg/adt"
 )
 
 var (

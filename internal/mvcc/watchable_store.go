@@ -18,9 +18,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/coreos/etcd/internal/lease"
-	"github.com/coreos/etcd/internal/mvcc/backend"
-	"github.com/coreos/etcd/internal/mvcc/mvccpb"
+	"github.com/branthz/etcd/internal/lease"
+	"github.com/branthz/etcd/internal/mvcc/backend"
+	"github.com/branthz/etcd/internal/mvcc/mvccpb"
 )
 
 // non-const so modifiable by tests

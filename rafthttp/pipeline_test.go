@@ -24,11 +24,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/etcd/etcdserver/stats"
-	"github.com/coreos/etcd/internal/version"
-	"github.com/coreos/etcd/pkg/testutil"
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/raft/raftpb"
+	"github.com/branthz/etcd/etcdserver/stats"
+	"github.com/branthz/etcd/internal/version"
+	"github.com/branthz/etcd/pkg/testutil"
+	"github.com/branthz/etcd/pkg/types"
+	"github.com/branthz/etcd/raft/raftpb"
 )
 
 // TestPipelineSend tests that pipeline could send data using roundtripper

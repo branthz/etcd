@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/coreos/go-semver/semver"
+	"github.com/branthz/go-semver/semver"
 )
 
 var (

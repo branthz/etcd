@@ -19,7 +19,7 @@ import (
 	"sort"
 	"time"
 
-	etcdErr "github.com/coreos/etcd/error"
+	etcdErr "github.com/branthz/etcd/error"
 	"github.com/jonboulle/clockwork"
 )
 

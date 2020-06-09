@@ -15,7 +15,7 @@
 package mvcc
 
 import (
-	"github.com/coreos/etcd/internal/lease"
+	"github.com/branthz/etcd/internal/lease"
 )
 
 type metricsTxnWrite struct {

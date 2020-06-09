@@ -20,12 +20,12 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/etcdserver/api/v2v3"
-	"github.com/coreos/etcd/integration"
-	"github.com/coreos/etcd/internal/store"
+	"github.com/branthz/etcd/clientv3"
+	"github.com/branthz/etcd/etcdserver/api/v2v3"
+	"github.com/branthz/etcd/integration"
+	"github.com/branthz/etcd/internal/store"
 
-	"github.com/coreos/pkg/capnslog"
+	"github.com/branthz/pkg/capnslog"
 	"google.golang.org/grpc/grpclog"
 )
 
