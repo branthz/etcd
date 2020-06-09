@@ -194,6 +194,6 @@ If you need your certificate to be signed for your member's FQDN in its Subject 
 
 [cfssl]: https://github.com/cloudflare/cfssl
 [tls-setup]: ../../hack/tls-setup
-[tls-guide]: https://github.com/coreos/docs/blob/master/os/generate-self-signed-certificates.md
+[tls-guide]: https://github.com/branthz/docs/blob/master/os/generate-self-signed-certificates.md
 [alt-name]: http://wiki.cacert.org/FAQ/subjectAltName
 [auth]: authentication.md

@@ -20,14 +20,14 @@ when asked
 
 2. Update your repository data with `pkg update`
 
-3. Install etcd with `pkg install coreos-etcd coreos-etcdctl`
+3. Install etcd with `pkg install branthz-etcd branthz-etcdctl`
 
 4. Verify successful installation with `pkg info | grep etcd` and you should get:
 
 ```
 r@fbsd­10:/ # pkg info | grep etcd
-coreos­etcd­0.2.0              Highly­available key value store and service discovery
-coreos­etcdctl­0.2.0           Simple commandline client for etcd
+branthz­etcd­0.2.0              Highly­available key value store and service discovery
+branthz­etcdctl­0.2.0           Simple commandline client for etcd
 r@fbsd­10:/ #
 ```
 
@@ -50,8 +50,8 @@ with `cd /usr/ports/devel/etcdctl && make install clean`
 
 ```
 r@fbsd­10:/ # pkg info | grep etcd
-coreos­etcd­0.2.0              Highly­available key value store and service discovery
-coreos­etcdctl­0.2.0           Simple commandline client for etcd
+branthz­etcd­0.2.0              Highly­available key value store and service discovery
+branthz­etcdctl­0.2.0           Simple commandline client for etcd
 r@fbsd­10:/ #
 ```
 

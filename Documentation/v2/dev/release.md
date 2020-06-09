@@ -23,9 +23,9 @@ All releases version numbers follow the format of [semantic versioning 2.0.0](ht
 ### Major, Minor Version Release, or its Pre-release
 
 - Ensure the relevant milestone on GitHub is complete. All referenced issues should be closed, or moved elsewhere.
-- Remove this release from [roadmap](https://github.com/coreos/etcd/blob/master/ROADMAP.md), if necessary.
+- Remove this release from [roadmap](https://github.com/branthz/etcd/blob/master/ROADMAP.md), if necessary.
 - Ensure the latest upgrade documentation is available.
-- Bump [hardcoded MinClusterVerion in the repository](https://github.com/coreos/etcd/blob/master/version/version.go#L29), if necessary.
+- Bump [hardcoded MinClusterVerion in the repository](https://github.com/branthz/etcd/blob/master/version/version.go#L29), if necessary.
 - Add feature capability maps for the new version, if necessary.
 
 ### Patch Version Release
@@ -42,14 +42,14 @@ All releases version numbers follow the format of [semantic versioning 2.0.0](ht
 
 ## Tag Version
 
-- Bump [hardcoded Version in the repository](https://github.com/coreos/etcd/blob/master/version/version.go#L30) to the latest version `${VERSION}`.
+- Bump [hardcoded Version in the repository](https://github.com/branthz/etcd/blob/master/version/version.go#L30) to the latest version `${VERSION}`.
 - Ensure all tests on CI system are passed.
 - Manually check etcd is buildable in Linux, Darwin and Windows.
 - Manually check upgrade etcd cluster of previous minor version works well.
 - Manually check new features work well.
 - Add a signed tag through `git tag -s ${VERSION}`.
 - Sanity check tag correctness through `git show tags/$VERSION`.
-- Push the tag to GitHub through `git push origin tags/$VERSION`. This assumes `origin` corresponds to "https://github.com/coreos/etcd".
+- Push the tag to GitHub through `git push origin tags/$VERSION`. This assumes `origin` corresponds to "https://github.com/branthz/etcd".
 
 ## Build Release Binaries and Images
 
@@ -74,7 +74,7 @@ The following commands are used for public release sign:
 cd release
 # personal GPG is okay for now
 for i in etcd-*{.zip,.tar.gz}; do gpg --sign ${i}; done
-# use `CoreOS ACI Builder <release@coreos.com>` secret key
+# use `CoreOS ACI Builder <release@branthz.com>` secret key
 for aci in etcd-${VERSION}.*.aci; do gpg -u 88182190 -a --output ${aci}.asc --detach-sig ${aci}; done
 ```
 
@@ -92,11 +92,11 @@ for aci in etcd-${VERSION}.*.aci; do gpg -u 88182190 -a --output ${aci}.asc --de
 
 ```
 docker login quay.io
-docker push quay.io/coreos/etcd:${VERSION}
-docker push quay.io/coreos/etcd:${VERSION}-${arch}
+docker push quay.io/branthz/etcd:${VERSION}
+docker push quay.io/branthz/etcd:${VERSION}-${arch}
 ```
 
-- Add `latest` tag to the new image on [quay.io](https://quay.io/repository/coreos/etcd?tag=latest&tab=tags) if this is a stable release.
+- Add `latest` tag to the new image on [quay.io](https://quay.io/repository/branthz/etcd?tag=latest&tab=tags) if this is a stable release.
 
 ## Announce to etcd-dev Googlegroup
 
@@ -111,5 +111,5 @@ git log ...${PREV_VERSION} --pretty=format:"%an" | sort | uniq | tr '\n' ',' | s
 
 ## Post Release
 
-- Create new stable branch through `git push origin ${VERSION_MAJOR}.${VERSION_MINOR}` if this is a major stable release. This assumes `origin` corresponds to "https://github.com/coreos/etcd".
-- Bump [hardcoded Version in the repository](https://github.com/coreos/etcd/blob/master/version/version.go#L30) to the version `${VERSION}+git`.
+- Create new stable branch through `git push origin ${VERSION_MAJOR}.${VERSION_MINOR}` if this is a major stable release. This assumes `origin` corresponds to "https://github.com/branthz/etcd".
+- Bump [hardcoded Version in the repository](https://github.com/branthz/etcd/blob/master/version/version.go#L30) to the version `${VERSION}+git`.

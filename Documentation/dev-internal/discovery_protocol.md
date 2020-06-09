@@ -105,7 +105,7 @@ The status for this discovery token, including the machines that have been regis
 
 ### Open-source repository
 
-The repository is located at https://github.com/coreos/discovery.etcd.io. It could be used to build a custom discovery service.
+The repository is located at https://github.com/branthz/discovery.etcd.io. It could be used to build a custom discovery service.
 
 [api]: ../v2/api.md#waiting-for-a-change
 [cluster-size]: ../v2/admin_guide.md#optimal-cluster-size

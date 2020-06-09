@@ -82,12 +82,12 @@ For distributed coordination, choosing etcd can help prevent operational headach
 [cockroach]: https://github.com/cockroachdb/cockroach
 [spanner]: https://cloud.google.com/spanner/
 [tidb]: https://github.com/pingcap/tidb
-[etcd-v3lock]: https://godoc.org/github.com/coreos/etcd/etcdserver/api/v3lock/v3lockpb
-[etcd-v3election]: https://godoc.org/github.com/coreos/etcd/etcdserver/api/v3election/v3electionpb
+[etcd-v3lock]: https://godoc.org/github.com/branthz/etcd/etcdserver/api/v3lock/v3lockpb
+[etcd-v3election]: https://godoc.org/github.com/branthz/etcd/etcdserver/api/v3election/v3electionpb
 [etcd-etcdctl-lock]: ../../etcdctl/README.md#lock-lockname-command-arg1-arg2-
 [etcd-etcdctl-elect]: ../../etcdctl/README.md#elect-options-election-name-proposal
 [etcd-mvcc]: data_model.md
-[etcd-recipe]: https://godoc.org/github.com/coreos/etcd/contrib/recipes
+[etcd-recipe]: https://godoc.org/github.com/branthz/etcd/contrib/recipes
 [consul-lock]: https://www.consul.io/docs/commands/lock.html
 [newsql-leader]: http://dl.acm.org/citation.cfm?id=2960999
 [etcd-reconfig]: ../op-guide/runtime-configuration.md
@@ -110,6 +110,6 @@ For distributed coordination, choosing etcd can help prevent operational headach
 [cockroach-grant]: https://www.cockroachlabs.com/docs/stable/grant.html
 [spanner-roles]: https://cloud.google.com/spanner/docs/iam#roles
 [zk-bindings]: https://zookeeper.apache.org/doc/r3.1.2/zookeeperProgrammers.html#ch_bindings
-[container-linux]: https://coreos.com/why
-[locksmith]: https://github.com/coreos/locksmith
+[container-linux]: https://branthz.com/why
+[locksmith]: https://github.com/branthz/locksmith
 [kubernetes]: http://kubernetes.io/docs/whatisk8s

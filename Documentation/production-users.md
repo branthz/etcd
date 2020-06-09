@@ -9,19 +9,19 @@ This document tracks people and use cases for etcd in production. By creating a 
 
 **This is a meta user; please feel free to document specific Kubernetes clusters!**
 
-All Kubernetes clusters use etcd as their primary data store. This means etcd's users include such companies as [Niantic, Inc Pokemon Go](https://cloudplatform.googleblog.com/2016/09/bringing-Pokemon-GO-to-life-on-Google-Cloud.html), [Box](https://blog.box.com/blog/kubernetes-box-microservices-maximum-velocity/), [CoreOS](https://coreos.com/tectonic), [Ticketmaster](https://www.youtube.com/watch?v=wqXVKneP0Hg), [Salesforce](https://www.salesforce.com) and many many more.
+All Kubernetes clusters use etcd as their primary data store. This means etcd's users include such companies as [Niantic, Inc Pokemon Go](https://cloudplatform.googleblog.com/2016/09/bringing-Pokemon-GO-to-life-on-Google-Cloud.html), [Box](https://blog.box.com/blog/kubernetes-box-microservices-maximum-velocity/), [CoreOS](https://branthz.com/tectonic), [Ticketmaster](https://www.youtube.com/watch?v=wqXVKneP0Hg), [Salesforce](https://www.salesforce.com) and many many more.
 
 ## discovery.etcd.io
 
-- *Application*: https://github.com/coreos/discovery.etcd.io
+- *Application*: https://github.com/branthz/discovery.etcd.io
 - *Launched*: Feb. 2014
 - *Cluster Size*: 5 members, 5 discovery proxies
 - *Order of Data Size*: 100s of Megabytes
-- *Operator*: CoreOS, brandon.philips@coreos.com
+- *Operator*: CoreOS, brandon.philips@branthz.com
 - *Environment*: AWS
 - *Backups*: Periodic async to S3
 
-discovery.etcd.io is the longest continuously running etcd backed service that we know about. It is the basis of automatic cluster bootstrap and was launched in Feb. 2014: https://coreos.com/blog/etcd-0.3.0-released/.
+discovery.etcd.io is the longest continuously running etcd backed service that we know about. It is the basis of automatic cluster bootstrap and was launched in Feb. 2014: https://branthz.com/blog/etcd-0.3.0-released/.
 
 ## OpenTable
 

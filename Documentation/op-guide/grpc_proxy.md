@@ -125,8 +125,8 @@ ETCDCTL_API=3 etcdctl --endpoints=http://localhost:23790 member list --write-out
 +----+---------+--------------------------------+------------+-----------------+
 | ID | STATUS  |              NAME              | PEER ADDRS |  CLIENT ADDRS   |
 +----+---------+--------------------------------+------------+-----------------+
-|  0 | started | Gyu-Hos-MBP.sfo.coreos.systems |            | 127.0.0.1:23791 |
-|  0 | started | Gyu-Hos-MBP.sfo.coreos.systems |            | 127.0.0.1:23790 |
+|  0 | started | Gyu-Hos-MBP.sfo.branthz.systems |            | 127.0.0.1:23791 |
+|  0 | started | Gyu-Hos-MBP.sfo.branthz.systems |            | 127.0.0.1:23790 |
 +----+---------+--------------------------------+------------+-----------------+
 ```
 
@@ -163,7 +163,7 @@ ETCDCTL_API=3 etcdctl --endpoints=http://localhost:23792 member list --write-out
 +----+---------+--------------------------------+------------+-----------------+
 | ID | STATUS  |              NAME              | PEER ADDRS |  CLIENT ADDRS   |
 +----+---------+--------------------------------+------------+-----------------+
-|  0 | started | Gyu-Hos-MBP.sfo.coreos.systems |            | 127.0.0.1:23792 |
+|  0 | started | Gyu-Hos-MBP.sfo.branthz.systems |            | 127.0.0.1:23792 |
 +----+---------+--------------------------------+------------+-----------------+
 ```
 

@@ -29,7 +29,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/coreos/etcd/internal/version"
+	"github.com/branthz/etcd/internal/version"
 )
 
 var (

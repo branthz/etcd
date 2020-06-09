@@ -26,4 +26,4 @@ etcd uses the [capnslog][capnslog] library for logging application output catego
     * Send a normal message to a remote peer
     * Write a log entry to disk
 
-[capnslog]: https://github.com/coreos/pkg/tree/master/capnslog
+[capnslog]: https://github.com/branthz/pkg/tree/master/capnslog

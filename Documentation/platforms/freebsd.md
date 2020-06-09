@@ -10,14 +10,14 @@ Starting with version 0.1.2 both etcd and etcdctl have been ported to
 
 2. Update the repository data with `pkg update`.
 
-3. Install etcd with `pkg install coreos-etcd coreos-etcdctl`.
+3. Install etcd with `pkg install branthz-etcd branthz-etcdctl`.
 
 4. Verify successful installation by confirming `pkg info | grep etcd` matches:
 
 ```
 r@fbsd­10:/ # pkg info | grep etcd
-coreos­etcd­0.2.0              Highly­available key value store and service discovery
-coreos­etcdctl­0.2.0           Simple commandline client for etcd
+branthz­etcd­0.2.0              Highly­available key value store and service discovery
+branthz­etcdctl­0.2.0           Simple commandline client for etcd
 r@fbsd­10:/ #
 ```
 
@@ -36,8 +36,8 @@ r@fbsd­10:/ #
 
 ```
 r@fbsd­10:/ # pkg info | grep etcd
-coreos­etcd­0.2.0              Highly­available key value store and service discovery
-coreos­etcdctl­0.2.0           Simple commandline client for etcd
+branthz­etcd­0.2.0              Highly­available key value store and service discovery
+branthz­etcdctl­0.2.0           Simple commandline client for etcd
 r@fbsd­10:/ #
 ```
 
