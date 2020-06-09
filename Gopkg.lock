@@ -13,19 +13,19 @@
   version = "v0.1.0"
 
 [[projects]]
-  name = "github.com/coreos/bbolt"
+  name = "github.com/branthz/bbolt"
   packages = ["."]
   revision = "48ea1b39c25fc1bab3506fbc712ecbaa842c4d2d"
-  version = "v1.3.1-coreos.6"
+  version = "v1.3.1-branthz.6"
 
 [[projects]]
-  name = "github.com/coreos/go-semver"
+  name = "github.com/branthz/go-semver"
   packages = ["semver"]
   revision = "8ab6407b697782a06568d4b7f1db25550ec2e4c6"
   version = "v0.2.0"
 
 [[projects]]
-  name = "github.com/coreos/go-systemd"
+  name = "github.com/branthz/go-systemd"
   packages = [
     "daemon",
     "journal",
@@ -35,7 +35,7 @@
   version = "v15"
 
 [[projects]]
-  name = "github.com/coreos/pkg"
+  name = "github.com/branthz/pkg"
   packages = [
     "capnslog",
     "dlopen"

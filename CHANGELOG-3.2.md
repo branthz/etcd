@@ -1,50 +1,50 @@
 
 
-## [v3.2.15](https://github.com/coreos/etcd/releases/tag/v3.2.15) (2018-01-22)
+## [v3.2.15](https://github.com/branthz/etcd/releases/tag/v3.2.15) (2018-01-22)
 
-See [code changes](https://github.com/coreos/etcd/compare/v3.2.14...v3.2.15) and [v3.2 upgrade guide](https://github.com/coreos/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
-
-### Fixed
-
-- Prevent [server panic from member update/add](https://github.com/coreos/etcd/pull/9174) with [wrong scheme URLs](https://github.com/coreos/etcd/issues/9173).
-- Log [user context cancel errors on stream APIs in debug level with TLS](https://github.com/coreos/etcd/pull/9178).
-
-
-## [v3.2.14](https://github.com/coreos/etcd/releases/tag/v3.2.14) (2018-01-11)
-
-See [code changes](https://github.com/coreos/etcd/compare/v3.2.13...v3.2.14) and [v3.2 upgrade guide](https://github.com/coreos/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
+See [code changes](https://github.com/branthz/etcd/compare/v3.2.14...v3.2.15) and [v3.2 upgrade guide](https://github.com/branthz/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
 
 ### Fixed
 
-- Fix [`mvcc/backend.defragdb` nil-pointer dereference on create bucket failure](https://github.com/coreos/etcd/pull/9119).
+- Prevent [server panic from member update/add](https://github.com/branthz/etcd/pull/9174) with [wrong scheme URLs](https://github.com/branthz/etcd/issues/9173).
+- Log [user context cancel errors on stream APIs in debug level with TLS](https://github.com/branthz/etcd/pull/9178).
+
+
+## [v3.2.14](https://github.com/branthz/etcd/releases/tag/v3.2.14) (2018-01-11)
+
+See [code changes](https://github.com/branthz/etcd/compare/v3.2.13...v3.2.14) and [v3.2 upgrade guide](https://github.com/branthz/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
+
+### Fixed
+
+- Fix [`mvcc/backend.defragdb` nil-pointer dereference on create bucket failure](https://github.com/branthz/etcd/pull/9119).
 
 ### Improved
 
-- Log [user context cancel errors on stream APIs in debug level](https://github.com/coreos/etcd/pull/9105).
+- Log [user context cancel errors on stream APIs in debug level](https://github.com/branthz/etcd/pull/9105).
 
 
-## [v3.2.13](https://github.com/coreos/etcd/releases/tag/v3.2.13) (2018-01-02)
+## [v3.2.13](https://github.com/branthz/etcd/releases/tag/v3.2.13) (2018-01-02)
 
-See [code changes](https://github.com/coreos/etcd/compare/v3.2.12...v3.2.13) and [v3.2 upgrade guide](https://github.com/coreos/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
-
-### Fixed
-
-- Remove [verbose error messages on stream cancel and gRPC info-level logs](https://github.com/coreos/etcd/pull/9080) in server-side.
-- Fix [gRPC server panic on `GracefulStop` TLS-enabled server](https://github.com/coreos/etcd/pull/8987).
-
-
-## [v3.2.12](https://github.com/coreos/etcd/releases/tag/v3.2.12) (2017-12-20)
-
-See [code changes](https://github.com/coreos/etcd/compare/v3.2.11...v3.2.12) and [v3.2 upgrade guide](https://github.com/coreos/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
+See [code changes](https://github.com/branthz/etcd/compare/v3.2.12...v3.2.13) and [v3.2 upgrade guide](https://github.com/branthz/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
 
 ### Fixed
 
-- Fix [error message of `Revision` compactor](https://github.com/coreos/etcd/pull/8999) in server-side.
+- Remove [verbose error messages on stream cancel and gRPC info-level logs](https://github.com/branthz/etcd/pull/9080) in server-side.
+- Fix [gRPC server panic on `GracefulStop` TLS-enabled server](https://github.com/branthz/etcd/pull/8987).
+
+
+## [v3.2.12](https://github.com/branthz/etcd/releases/tag/v3.2.12) (2017-12-20)
+
+See [code changes](https://github.com/branthz/etcd/compare/v3.2.11...v3.2.12) and [v3.2 upgrade guide](https://github.com/branthz/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
+
+### Fixed
+
+- Fix [error message of `Revision` compactor](https://github.com/branthz/etcd/pull/8999) in server-side.
 
 ### Added(`etcd/clientv3`)
 
-- Add [`MaxCallSendMsgSize` and `MaxCallRecvMsgSize`](https://github.com/coreos/etcd/pull/9047) fields to [`clientv3.Config`](https://godoc.org/github.com/coreos/etcd/clientv3#Config).
-  - Fix [exceeded response size limit error in client-side](https://github.com/coreos/etcd/issues/9043).
+- Add [`MaxCallSendMsgSize` and `MaxCallRecvMsgSize`](https://github.com/branthz/etcd/pull/9047) fields to [`clientv3.Config`](https://godoc.org/github.com/branthz/etcd/clientv3#Config).
+  - Fix [exceeded response size limit error in client-side](https://github.com/branthz/etcd/issues/9043).
   - Address [kubernetes#51099](https://github.com/kubernetes/kubernetes/issues/51099).
     - In previous versions(v3.2.10, v3.2.11), client response size was limited to only 4 MiB.
   - `MaxCallSendMsgSize` default value is 2 MiB, if not configured.
@@ -56,51 +56,51 @@ See [code changes](https://github.com/coreos/etcd/compare/v3.2.11...v3.2.12) and
   - No code change, just to be explicit about recommended versions.
 
 
-## [v3.2.11](https://github.com/coreos/etcd/releases/tag/v3.2.11) (2017-12-05)
+## [v3.2.11](https://github.com/branthz/etcd/releases/tag/v3.2.11) (2017-12-05)
 
-See [code changes](https://github.com/coreos/etcd/compare/v3.2.10...v3.2.11) and [v3.2 upgrade guide](https://github.com/coreos/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
+See [code changes](https://github.com/branthz/etcd/compare/v3.2.10...v3.2.11) and [v3.2 upgrade guide](https://github.com/branthz/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
 
 ### Fixed
 
-- Fix racey grpc-go's server handler transport `WriteStatus` call to prevent [TLS-enabled etcd server crash](https://github.com/coreos/etcd/issues/8904).
+- Fix racey grpc-go's server handler transport `WriteStatus` call to prevent [TLS-enabled etcd server crash](https://github.com/branthz/etcd/issues/8904).
   - Upgrade [`google.golang.org/grpc`](https://github.com/grpc/grpc-go/releases) `v1.7.3` to `v1.7.4`.
-  - Add [gRPC RPC failure warnings](https://github.com/coreos/etcd/pull/8939) to help debug such issues in the future.
+  - Add [gRPC RPC failure warnings](https://github.com/branthz/etcd/pull/8939) to help debug such issues in the future.
 - Remove `--listen-metrics-urls` flag in monitoring document (non-released in `v3.2.x`, planned for `v3.3.x`).
 
 ### Added
 
-- Provide [more cert details](https://github.com/coreos/etcd/pull/8952/files) on TLS handshake failures.
+- Provide [more cert details](https://github.com/branthz/etcd/pull/8952/files) on TLS handshake failures.
 
 
-## [v3.2.10](https://github.com/coreos/etcd/releases/tag/v3.2.10) (2017-11-16)
+## [v3.2.10](https://github.com/branthz/etcd/releases/tag/v3.2.10) (2017-11-16)
 
-See [code changes](https://github.com/coreos/etcd/compare/v3.2.9...v3.2.10) and [v3.2 upgrade guide](https://github.com/coreos/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
+See [code changes](https://github.com/branthz/etcd/compare/v3.2.9...v3.2.10) and [v3.2 upgrade guide](https://github.com/branthz/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
 
 ### Fixed
 
-- Replace backend key-value database `boltdb/bolt` with [`coreos/bbolt`](https://github.com/coreos/bbolt/releases) to address [backend database size issue](https://github.com/coreos/etcd/issues/8009).
-- Fix `clientv3` balancer to handle [network partitions](https://github.com/coreos/etcd/issues/8711).
+- Replace backend key-value database `boltdb/bolt` with [`branthz/bbolt`](https://github.com/branthz/bbolt/releases) to address [backend database size issue](https://github.com/branthz/etcd/issues/8009).
+- Fix `clientv3` balancer to handle [network partitions](https://github.com/branthz/etcd/issues/8711).
   - Upgrade [`google.golang.org/grpc`](https://github.com/grpc/grpc-go/releases) `v1.2.1` to `v1.7.3`.
   - Upgrade [`github.com/grpc-ecosystem/grpc-gateway`](https://github.com/grpc-ecosystem/grpc-gateway/releases) `v1.2` to `v1.3`.
-- Revert [discovery SRV auth `ServerName` with `*.{ROOT_DOMAIN}`](https://github.com/coreos/etcd/pull/8651) to support non-wildcard subject alternative names in the certs (see [issue #8445](https://github.com/coreos/etcd/issues/8445) for more contexts).
+- Revert [discovery SRV auth `ServerName` with `*.{ROOT_DOMAIN}`](https://github.com/branthz/etcd/pull/8651) to support non-wildcard subject alternative names in the certs (see [issue #8445](https://github.com/branthz/etcd/issues/8445) for more contexts).
   - For instance, `etcd --discovery-srv=etcd.local` will only authenticate peers/clients when the provided certs have root domain `etcd.local` (**not `*.etcd.local`**) as an entry in Subject Alternative Name (SAN) field.
 
 
-## [v3.2.9](https://github.com/coreos/etcd/releases/tag/v3.2.9) (2017-10-06)
+## [v3.2.9](https://github.com/branthz/etcd/releases/tag/v3.2.9) (2017-10-06)
 
-See [code changes](https://github.com/coreos/etcd/compare/v3.2.8...v3.2.9) and [v3.2 upgrade guide](https://github.com/coreos/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
+See [code changes](https://github.com/branthz/etcd/compare/v3.2.8...v3.2.9) and [v3.2 upgrade guide](https://github.com/branthz/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
 
 ### Fixed(Security)
 
 - Compile with [Go 1.8.4](https://groups.google.com/d/msg/golang-nuts/sHfMg4gZNps/a-HDgDDDAAAJ).
 - Update `golang.org/x/crypto/bcrypt` (see [golang/crypto@6c586e1](https://github.com/golang/crypto/commit/6c586e17d90a7d08bbbc4069984180dce3b04117)).
-- Fix discovery SRV bootstrapping to [authenticate `ServerName` with `*.{ROOT_DOMAIN}`](https://github.com/coreos/etcd/pull/8651), in order to support sub-domain wildcard matching (see [issue #8445](https://github.com/coreos/etcd/issues/8445) for more contexts).
+- Fix discovery SRV bootstrapping to [authenticate `ServerName` with `*.{ROOT_DOMAIN}`](https://github.com/branthz/etcd/pull/8651), in order to support sub-domain wildcard matching (see [issue #8445](https://github.com/branthz/etcd/issues/8445) for more contexts).
   - For instance, `etcd --discovery-srv=etcd.local` will only authenticate peers/clients when the provided certs have root domain `*.etcd.local` as an entry in Subject Alternative Name (SAN) field.
 
 
-## [v3.2.8](https://github.com/coreos/etcd/releases/tag/v3.2.8) (2017-09-29)
+## [v3.2.8](https://github.com/branthz/etcd/releases/tag/v3.2.8) (2017-09-29)
 
-See [code changes](https://github.com/coreos/etcd/compare/v3.2.7...v3.2.8) and [v3.2 upgrade guide](https://github.com/coreos/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
+See [code changes](https://github.com/branthz/etcd/compare/v3.2.7...v3.2.8) and [v3.2 upgrade guide](https://github.com/branthz/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
 
 ### Fixed
 
@@ -108,9 +108,9 @@ See [code changes](https://github.com/coreos/etcd/compare/v3.2.7...v3.2.8) and [
 - Fix grpc-proxy to respect `KeysOnly` flag.
 
 
-## [v3.2.7](https://github.com/coreos/etcd/releases/tag/v3.2.7) (2017-09-01)
+## [v3.2.7](https://github.com/branthz/etcd/releases/tag/v3.2.7) (2017-09-01)
 
-See [code changes](https://github.com/coreos/etcd/compare/v3.2.6...v3.2.7) and [v3.2 upgrade guide](https://github.com/coreos/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
+See [code changes](https://github.com/branthz/etcd/compare/v3.2.6...v3.2.7) and [v3.2 upgrade guide](https://github.com/branthz/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
 
 ### Fixed
 
@@ -119,9 +119,9 @@ See [code changes](https://github.com/coreos/etcd/compare/v3.2.6...v3.2.7) and [
   - Use store revision from first fetch to resolve write conflicts instead of modified revision.
 
 
-## [v3.2.6](https://github.com/coreos/etcd/releases/tag/v3.2.6) (2017-08-21)
+## [v3.2.6](https://github.com/branthz/etcd/releases/tag/v3.2.6) (2017-08-21)
 
-See [code changes](https://github.com/coreos/etcd/compare/v3.2.5...v3.2.6).
+See [code changes](https://github.com/branthz/etcd/compare/v3.2.5...v3.2.6).
 
 ### Fixed
 
@@ -131,9 +131,9 @@ See [code changes](https://github.com/coreos/etcd/compare/v3.2.5...v3.2.6).
 - Add `--enable-pprof` flag to etcd configuration file format.
 
 
-## [v3.2.5](https://github.com/coreos/etcd/releases/tag/v3.2.5) (2017-08-04)
+## [v3.2.5](https://github.com/branthz/etcd/releases/tag/v3.2.5) (2017-08-04)
 
-See [code changes](https://github.com/coreos/etcd/compare/v3.2.4...v3.2.5) and [v3.2 upgrade guide](https://github.com/coreos/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
+See [code changes](https://github.com/branthz/etcd/compare/v3.2.4...v3.2.5) and [v3.2 upgrade guide](https://github.com/branthz/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
 
 ### Changed
 
@@ -150,9 +150,9 @@ See [code changes](https://github.com/coreos/etcd/compare/v3.2.4...v3.2.5) and [
 - Add container registry `gcr.io/etcd-development/etcd`.
 
 
-## [v3.2.4](https://github.com/coreos/etcd/releases/tag/v3.2.4) (2017-07-19)
+## [v3.2.4](https://github.com/branthz/etcd/releases/tag/v3.2.4) (2017-07-19)
 
-See [code changes](https://github.com/coreos/etcd/compare/v3.2.3...v3.2.4) and [v3.2 upgrade guide](https://github.com/coreos/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
+See [code changes](https://github.com/branthz/etcd/compare/v3.2.3...v3.2.4) and [v3.2 upgrade guide](https://github.com/branthz/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
 
 ### Fixed
 
@@ -160,9 +160,9 @@ See [code changes](https://github.com/coreos/etcd/compare/v3.2.3...v3.2.4) and [
 - Fix gRPC proxy Snapshot RPC error handling
 
 
-## [v3.2.3](https://github.com/coreos/etcd/releases/tag/v3.2.3) (2017-07-14)
+## [v3.2.3](https://github.com/branthz/etcd/releases/tag/v3.2.3) (2017-07-14)
 
-See [code changes](https://github.com/coreos/etcd/compare/v3.2.2...v3.2.3) and [v3.2 upgrade guide](https://github.com/coreos/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
+See [code changes](https://github.com/branthz/etcd/compare/v3.2.2...v3.2.3) and [v3.2 upgrade guide](https://github.com/branthz/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
 
 ### Fixed
 
@@ -171,12 +171,12 @@ See [code changes](https://github.com/coreos/etcd/compare/v3.2.2...v3.2.3) and [
 ### Added
 
 - Tag docker images with minor versions
-  - e.g. `docker pull quay.io/coreos/etcd:v3.2` to fetch latest v3.2 versions
+  - e.g. `docker pull quay.io/branthz/etcd:v3.2` to fetch latest v3.2 versions
 
 
-## [v3.2.2](https://github.com/coreos/etcd/releases/tag/v3.2.2) (2017-07-07)
+## [v3.2.2](https://github.com/branthz/etcd/releases/tag/v3.2.2) (2017-07-07)
 
-See [code changes](https://github.com/coreos/etcd/compare/v3.2.1...v3.2.2) and [v3.2 upgrade guide](https://github.com/coreos/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
+See [code changes](https://github.com/branthz/etcd/compare/v3.2.1...v3.2.2) and [v3.2 upgrade guide](https://github.com/branthz/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
 
 ### Improved
 
@@ -193,9 +193,9 @@ See [code changes](https://github.com/coreos/etcd/compare/v3.2.1...v3.2.2) and [
 - Fix 'tools/benchmark' watch command.
 
 
-## [v3.2.1](https://github.com/coreos/etcd/releases/tag/v3.2.1) (2017-06-23)
+## [v3.2.1](https://github.com/branthz/etcd/releases/tag/v3.2.1) (2017-06-23)
 
-See [code changes](https://github.com/coreos/etcd/compare/v3.2.0...v3.2.1) and [v3.2 upgrade guide](https://github.com/coreos/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
+See [code changes](https://github.com/branthz/etcd/compare/v3.2.0...v3.2.1) and [v3.2 upgrade guide](https://github.com/branthz/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
 
 ### Fixed
 
@@ -204,9 +204,9 @@ See [code changes](https://github.com/coreos/etcd/compare/v3.2.0...v3.2.1) and [
 - Fix backend database size debugging metrics.
 
 
-## [v3.2.0](https://github.com/coreos/etcd/releases/tag/v3.2.0) (2017-06-09)
+## [v3.2.0](https://github.com/branthz/etcd/releases/tag/v3.2.0) (2017-06-09)
 
-See [code changes](https://github.com/coreos/etcd/compare/v3.1.0...v3.2.0) and [v3.2 upgrade guide](https://github.com/coreos/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
+See [code changes](https://github.com/branthz/etcd/compare/v3.1.0...v3.2.0) and [v3.2 upgrade guide](https://github.com/branthz/etcd/blob/master/Documentation/upgrades/upgrade_3_2.md) for any breaking changes.
 
 ### Improved
 
@@ -264,7 +264,7 @@ See [code changes](https://github.com/coreos/etcd/compare/v3.1.0...v3.2.0) and [
 - Dependencies
   - Update [`google.golang.org/grpc`](https://github.com/grpc/grpc-go/releases) to `v1.2.1`.
   - Update [`github.com/grpc-ecosystem/grpc-gateway`](https://github.com/grpc-ecosystem/grpc-gateway/releases) to `v1.2.0`.
-- Rejects domains names for `--listen-peer-urls` and `--listen-client-urls` (3.1 only prints out warnings), since [domain name is invalid for network interface binding](https://github.com/coreos/etcd/issues/6336).
+- Rejects domains names for `--listen-peer-urls` and `--listen-client-urls` (3.1 only prints out warnings), since [domain name is invalid for network interface binding](https://github.com/branthz/etcd/issues/6336).
 
 ### Fixed
 

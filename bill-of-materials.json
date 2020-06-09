@@ -27,7 +27,7 @@
 		]
 	},
 	{
-		"project": "github.com/coreos/bbolt",
+		"project": "github.com/branthz/bbolt",
 		"licenses": [
 			{
 				"type": "MIT License",
@@ -36,7 +36,7 @@
 		]
 	},
 	{
-		"project": "github.com/coreos/etcd",
+		"project": "github.com/branthz/etcd",
 		"licenses": [
 			{
 				"type": "Apache License 2.0",
@@ -45,7 +45,7 @@
 		]
 	},
 	{
-		"project": "github.com/coreos/go-semver/semver",
+		"project": "github.com/branthz/go-semver/semver",
 		"licenses": [
 			{
 				"type": "Apache License 2.0",
@@ -54,7 +54,7 @@
 		]
 	},
 	{
-		"project": "github.com/coreos/go-systemd",
+		"project": "github.com/branthz/go-systemd",
 		"licenses": [
 			{
 				"type": "Apache License 2.0",
@@ -63,7 +63,7 @@
 		]
 	},
 	{
-		"project": "github.com/coreos/pkg",
+		"project": "github.com/branthz/pkg",
 		"licenses": [
 			{
 				"type": "Apache License 2.0",
