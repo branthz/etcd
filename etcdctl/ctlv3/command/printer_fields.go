@@ -17,10 +17,10 @@ package command
 import (
 	"fmt"
 
-	v3 "github.com/coreos/etcd/clientv3"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	spb "github.com/coreos/etcd/internal/mvcc/mvccpb"
-	"github.com/coreos/etcd/snapshot"
+	v3 "github.com/branthz/etcd/clientv3"
+	pb "github.com/branthz/etcd/etcdserver/etcdserverpb"
+	spb "github.com/branthz/etcd/internal/mvcc/mvccpb"
+	"github.com/branthz/etcd/snapshot"
 )
 
 type fieldsPrinter struct{ printer }

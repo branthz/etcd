@@ -8,11 +8,11 @@ if ! [[ "$0" =~ scripts/updatebom.sh ]]; then
 fi
 
 echo "installing 'bill-of-materials.json'"
-go get -v -u github.com/coreos/license-bill-of-materials
+go get -v -u github.com/branthz/license-bill-of-materials
 
 echo "generating bill-of-materials.json"
 license-bill-of-materials \
     --override-file ./bill-of-materials.override.json \
-    github.com/coreos/etcd github.com/coreos/etcd/etcdctl > bill-of-materials.json
+    github.com/branthz/etcd github.com/branthz/etcd/etcdctl > bill-of-materials.json
 
 echo "generated bill-of-materials.json"

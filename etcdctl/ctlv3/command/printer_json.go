@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/coreos/etcd/snapshot"
+	"github.com/branthz/etcd/snapshot"
 )
 
 type jsonPrinter struct{ printer }

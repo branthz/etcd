@@ -28,7 +28,7 @@ export GOPATH=${PWD}/gopath.proto
 export GOBIN=${PWD}/bin
 export PATH="${GOBIN}:${PATH}"
 
-COREOS_ROOT="${GOPATH}/src/github.com/coreos"
+COREOS_ROOT="${GOPATH}/src/github.com/branthz"
 ETCD_ROOT="${COREOS_ROOT}/etcd"
 GOGOPROTO_ROOT="${GOPATH}/src/github.com/gogo/protobuf"
 SCHWAG_ROOT="${GOPATH}/src/github.com/hexfusion/schwag"
@@ -58,12 +58,12 @@ popd
 
 for dir in ${DIRS}; do
 	pushd "${dir}"
-		protoc --gofast_out=plugins=grpc,import_prefix=github.com/coreos/:. -I=".:${GOGOPROTO_PATH}:${COREOS_ROOT}:${GRPC_GATEWAY_ROOT}/third_party/googleapis" ./*.proto
-		sed -i.bak -E "s/github\.com\/coreos\/(gogoproto|github\.com|golang\.org|google\.golang\.org)/\1/g" ./*.pb.go
-		sed -i.bak -E 's/github\.com\/coreos\/(errors|fmt|io)/\1/g' ./*.pb.go
+		protoc --gofast_out=plugins=grpc,import_prefix=github.com/branthz/:. -I=".:${GOGOPROTO_PATH}:${COREOS_ROOT}:${GRPC_GATEWAY_ROOT}/third_party/googleapis" ./*.proto
+		sed -i.bak -E "s/github\.com\/branthz\/(gogoproto|github\.com|golang\.org|google\.golang\.org)/\1/g" ./*.pb.go
+		sed -i.bak -E 's/github\.com\/branthz\/(errors|fmt|io)/\1/g' ./*.pb.go
 		sed -i.bak -E 's/import _ \"gogoproto\"//g' ./*.pb.go
 		sed -i.bak -E 's/import fmt \"fmt\"//g' ./*.pb.go
-		sed -i.bak -E 's/import _ \"github\.com\/coreos\/google\/api\"//g' ./*.pb.go
+		sed -i.bak -E 's/import _ \"github\.com\/branthz\/google\/api\"//g' ./*.pb.go
 		sed -i.bak -E 's/import _ \"google\.golang\.org\/genproto\/googleapis\/api\/annotations\"//g' ./*.pb.go
 		rm -f ./*.bak
 		goimports -w ./*.pb.go
@@ -92,7 +92,7 @@ for pb in etcdserverpb/rpc api/v3lock/v3lockpb/v3lock api/v3election/v3electionp
 	sed -i.bak -E "s/[^(]*Client, runtime/${pkg}.&/" ${gwfile}
 	sed -i.bak -E "s/New[A-Za-z]*Client/${pkg}.&/" ${gwfile}
 	# darwin doesn't like newlines in sed...
-	sed -i.bak -E "s|import \(|& \"github.com/coreos/etcd/${pkgpath}\"|" ${gwfile}
+	sed -i.bak -E "s|import \(|& \"github.com/branthz/etcd/${pkgpath}\"|" ${gwfile}
 	mkdir -p  "${pkgpath}"/gw/
 	go fmt ${gwfile}
 	mv ${gwfile} "${pkgpath}/gw/"
@@ -112,16 +112,16 @@ popd
 schwag -input=Documentation/dev-guide/apispec/swagger/rpc.swagger.json
 
 # install protodoc
-# go get -v -u github.com/coreos/protodoc
+# go get -v -u github.com/branthz/protodoc
 #
 # by default, do not run this option.
 # only run when './scripts/genproto.sh -g'
 #
 if [ "$1" = "-g" ]; then
 	echo "protodoc is auto-generating grpc API reference documentation..."
-	go get -v -u github.com/coreos/protodoc
+	go get -v -u github.com/branthz/protodoc
 	SHA_PROTODOC="4372ee725035a208404e2d5465ba921469decc32"
-	PROTODOC_PATH="${GOPATH}/src/github.com/coreos/protodoc"
+	PROTODOC_PATH="${GOPATH}/src/github.com/branthz/protodoc"
 	pushd "${PROTODOC_PATH}"
 		git reset --hard "${SHA_PROTODOC}"
 		go install

@@ -17,7 +17,7 @@ package command
 import (
 	"fmt"
 
-	"github.com/coreos/etcd/internal/version"
+	"github.com/branthz/etcd/internal/version"
 
 	"github.com/spf13/cobra"
 )

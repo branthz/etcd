@@ -19,7 +19,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/coreos/etcd/clientv3"
+	"github.com/branthz/etcd/clientv3"
 	"github.com/spf13/cobra"
 )
 

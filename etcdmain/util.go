@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/coreos/etcd/pkg/srv"
-	"github.com/coreos/etcd/pkg/transport"
+	"github.com/branthz/etcd/pkg/srv"
+	"github.com/branthz/etcd/pkg/transport"
 )
 
 func discoverEndpoints(dns string, ca string, insecure bool) (s srv.SRVClients) {

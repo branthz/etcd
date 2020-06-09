@@ -26,26 +26,26 @@ import (
 	"strings"
 	"time"
 
-	"github.com/coreos/etcd/embed"
-	"github.com/coreos/etcd/etcdserver"
-	"github.com/coreos/etcd/etcdserver/api/etcdhttp"
-	"github.com/coreos/etcd/internal/discovery"
-	"github.com/coreos/etcd/internal/version"
-	"github.com/coreos/etcd/pkg/cors"
-	"github.com/coreos/etcd/pkg/fileutil"
-	pkgioutil "github.com/coreos/etcd/pkg/ioutil"
-	"github.com/coreos/etcd/pkg/osutil"
-	"github.com/coreos/etcd/pkg/transport"
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/proxy/httpproxy"
+	"github.com/branthz/etcd/embed"
+	"github.com/branthz/etcd/etcdserver"
+	"github.com/branthz/etcd/etcdserver/api/etcdhttp"
+	"github.com/branthz/etcd/internal/discovery"
+	"github.com/branthz/etcd/internal/version"
+	"github.com/branthz/etcd/pkg/cors"
+	"github.com/branthz/etcd/pkg/fileutil"
+	pkgioutil "github.com/branthz/etcd/pkg/ioutil"
+	"github.com/branthz/etcd/pkg/osutil"
+	"github.com/branthz/etcd/pkg/transport"
+	"github.com/branthz/etcd/pkg/types"
+	"github.com/branthz/etcd/proxy/httpproxy"
 
-	"github.com/coreos/pkg/capnslog"
+	"github.com/branthz/pkg/capnslog"
 	"google.golang.org/grpc"
 )
 
 type dirType string
 
-var plog = capnslog.NewPackageLogger("github.com/coreos/etcd", "etcdmain")
+var plog = capnslog.NewPackageLogger("github.com/branthz/etcd", "etcdmain")
 
 var (
 	dirMember = dirType("member")

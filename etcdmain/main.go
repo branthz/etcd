@@ -19,8 +19,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/coreos/go-systemd/daemon"
-	systemdutil "github.com/coreos/go-systemd/util"
+	"github.com/branthz/go-systemd/daemon"
+	systemdutil "github.com/branthz/go-systemd/util"
 )
 
 func Main() {

@@ -25,10 +25,10 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/coreos/etcd/embed"
-	"github.com/coreos/etcd/internal/version"
-	"github.com/coreos/etcd/pkg/flags"
-	"github.com/coreos/etcd/pkg/types"
+	"github.com/branthz/etcd/embed"
+	"github.com/branthz/etcd/internal/version"
+	"github.com/branthz/etcd/pkg/flags"
+	"github.com/branthz/etcd/pkg/types"
 
 	"github.com/ghodss/yaml"
 )

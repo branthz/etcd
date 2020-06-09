@@ -20,9 +20,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/coreos/etcd/pkg/logger"
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/snapshot"
+	"github.com/branthz/etcd/pkg/logger"
+	"github.com/branthz/etcd/pkg/types"
+	"github.com/branthz/etcd/snapshot"
 
 	"github.com/spf13/cobra"
 )
@@ -102,7 +102,7 @@ func snapshotSaveCommandFunc(cmd *cobra.Command, args []string) {
 		ExitWithError(ExitError, err)
 	}
 	if debug {
-		lg = logger.NewPackageLogger("github.com/coreos/etcd", "snapshot")
+		lg = logger.NewPackageLogger("github.com/branthz/etcd", "snapshot")
 	}
 	sp := snapshot.NewV3(mustClientFromCmd(cmd), lg)
 
@@ -126,7 +126,7 @@ func snapshotStatusCommandFunc(cmd *cobra.Command, args []string) {
 		ExitWithError(ExitError, err)
 	}
 	if debug {
-		lg = logger.NewPackageLogger("github.com/coreos/etcd", "snapshot")
+		lg = logger.NewPackageLogger("github.com/branthz/etcd", "snapshot")
 	}
 	sp := snapshot.NewV3(nil, lg)
 
@@ -164,7 +164,7 @@ func snapshotRestoreCommandFunc(cmd *cobra.Command, args []string) {
 		ExitWithError(ExitError, err)
 	}
 	if debug {
-		lg = logger.NewPackageLogger("github.com/coreos/etcd", "snapshot")
+		lg = logger.NewPackageLogger("github.com/branthz/etcd", "snapshot")
 	}
 	sp := snapshot.NewV3(nil, lg)
 
