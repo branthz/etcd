@@ -20,9 +20,9 @@ import (
 	"sync"
 	"time"
 
-	v3 "github.com/coreos/etcd/clientv3"
-	v3pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/internal/mvcc/mvccpb"
+	v3 "github.com/branthz/etcd/clientv3"
+	v3pb "github.com/branthz/etcd/etcdserver/etcdserverpb"
+	"github.com/branthz/etcd/internal/mvcc/mvccpb"
 )
 
 const revokeBackoff = 2 * time.Second

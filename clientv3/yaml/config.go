@@ -22,8 +22,8 @@ import (
 
 	"github.com/ghodss/yaml"
 
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/pkg/tlsutil"
+	"github.com/branthz/etcd/clientv3"
+	"github.com/branthz/etcd/pkg/tlsutil"
 )
 
 type yamlConfig struct {

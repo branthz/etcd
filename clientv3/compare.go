@@ -15,7 +15,7 @@
 package clientv3
 
 import (
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
+	pb "github.com/branthz/etcd/etcdserver/etcdserverpb"
 )
 
 type CompareTarget int

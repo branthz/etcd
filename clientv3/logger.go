@@ -18,7 +18,7 @@ import (
 	"io/ioutil"
 	"sync"
 
-	"github.com/coreos/etcd/pkg/logger"
+	"github.com/branthz/etcd/pkg/logger"
 
 	"google.golang.org/grpc/grpclog"
 )

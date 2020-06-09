@@ -18,8 +18,8 @@ import (
 	"context"
 	"strings"
 
-	v3 "github.com/coreos/etcd/clientv3"
-	v3pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
+	v3 "github.com/branthz/etcd/clientv3"
+	v3pb "github.com/branthz/etcd/etcdserver/etcdserverpb"
 )
 
 type txnLeasing struct {

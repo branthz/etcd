@@ -20,11 +20,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/embed"
-	"github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes"
-	"github.com/coreos/etcd/integration"
-	"github.com/coreos/etcd/pkg/testutil"
+	"github.com/branthz/etcd/clientv3"
+	"github.com/branthz/etcd/embed"
+	"github.com/branthz/etcd/etcdserver/api/v3rpc/rpctypes"
+	"github.com/branthz/etcd/integration"
+	"github.com/branthz/etcd/pkg/testutil"
 )
 
 func TestTxnError(t *testing.T) {

@@ -19,8 +19,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
+	"github.com/branthz/etcd/etcdserver/api/v3rpc/rpctypes"
+	pb "github.com/branthz/etcd/etcdserver/etcdserverpb"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
@@ -129,7 +129,7 @@ type Lease interface {
 	// is returned. Otherwise, it retries.
 	//
 	// TODO(v4.0): post errors to last keep alive message before closing
-	// (see https://github.com/coreos/etcd/pull/7866)
+	// (see https://github.com/branthz/etcd/pull/7866)
 	KeepAlive(ctx context.Context, id LeaseID) (<-chan *LeaseKeepAliveResponse, error)
 
 	// KeepAliveOnce renews the lease once. The response corresponds to the

@@ -22,8 +22,8 @@ import (
 	"testing"
 	"time"
 
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/pkg/testutil"
+	pb "github.com/branthz/etcd/etcdserver/etcdserverpb"
+	"github.com/branthz/etcd/pkg/testutil"
 
 	"google.golang.org/grpc"
 )
@@ -192,7 +192,7 @@ func TestHealthBalancerGraylist(t *testing.T) {
 
 // TestBalancerDoNotBlockOnClose ensures that balancer and grpc don't deadlock each other
 // due to rapid open/close conn. The deadlock causes balancer.Close() to block forever.
-// See issue: https://github.com/coreos/etcd/issues/7283 for more detail.
+// See issue: https://github.com/branthz/etcd/issues/7283 for more detail.
 func TestBalancerDoNotBlockOnClose(t *testing.T) {
 	defer testutil.AfterTest(t)
 

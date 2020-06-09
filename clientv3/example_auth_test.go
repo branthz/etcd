@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/coreos/etcd/clientv3"
+	"github.com/branthz/etcd/clientv3"
 )
 
 func ExampleAuth() {

@@ -18,7 +18,7 @@ import (
 	"context"
 	"sync"
 
-	"github.com/coreos/etcd/clientv3"
+	"github.com/branthz/etcd/clientv3"
 )
 
 // kvOrdering ensures that serialized requests do not return
