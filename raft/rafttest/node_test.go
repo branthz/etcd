@@ -19,7 +19,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/etcd/raft"
+	"github.com/branthz/etcd/raft"
 )
 
 func TestBasicProgress(t *testing.T) {
