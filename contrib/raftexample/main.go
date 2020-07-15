@@ -16,17 +16,42 @@ package main
 
 import (
 	"flag"
+	"fmt"
+	"os"
 	"strings"
 
+	"github.com/BurntSushi/toml"
 	"github.com/branthz/etcd/raft/raftpb"
+	"github.com/branthz/utarrow/lib/log"
+)
+
+type localConfig struct {
+	ID       int
+	Listen   string
+	Peers    string
+	Join     bool
+	LogPath  string
+	LogLevel string
+}
+
+var (
+	configPath  string
+	LocalConfig localConfig
 )
 
 func main() {
-	cluster := flag.String("cluster", "http://127.0.0.1:9021", "comma separated cluster peers")
-	id := flag.Int("id", 1, "node ID")
-	kvport := flag.Int("port", 9121, "key-value server port")
-	join := flag.Bool("join", false, "join an existing cluster")
+	flag.StringVar(&configPath, "c", "./conf.toml", "config path")
 	flag.Parse()
+	_, err := toml.DecodeFile(configPath, &LocalConfig)
+	if err != nil {
+		fmt.Println("11111", err)
+		os.Exit(-1)
+	}
+	err = log.Setup(LocalConfig.LogPath, LocalConfig.LogLevel)
+	if err != nil {
+		fmt.Println("2222", err)
+		os.Exit(-1)
+	}
 
 	proposeC := make(chan string)
 	defer close(proposeC)
@@ -36,10 +61,10 @@ func main() {
 	// raft provides a commit stream for the proposals from the http api
 	var kvs *kvstore
 	getSnapshot := func() ([]byte, error) { return kvs.getSnapshot() }
-	commitC, errorC, snapshotterReady := newRaftNode(*id, strings.Split(*cluster, ","), *join, getSnapshot, proposeC, confChangeC)
+	commitC, errorC, snapshotterReady := newRaftNode(LocalConfig.ID, strings.Split(LocalConfig.Peers, ","), LocalConfig.Join, getSnapshot, proposeC, confChangeC)
 
 	kvs = newKVStore(<-snapshotterReady, proposeC, commitC, errorC)
 
 	// the key-value http handler will propose updates to raft
-	serveHttpKVAPI(kvs, *kvport, confChangeC, errorC)
+	serveHttpKVAPI(kvs, LocalConfig.Listen, confChangeC, errorC)
 }

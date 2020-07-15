@@ -101,9 +101,9 @@ func (h *httpKVAPI) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 // serveHttpKVAPI starts a key-value server with a GET/PUT API and listens.
-func serveHttpKVAPI(kv *kvstore, port int, confChangeC chan<- raftpb.ConfChange, errorC <-chan error) {
+func serveHttpKVAPI(kv *kvstore, host string, confChangeC chan<- raftpb.ConfChange, errorC <-chan error) {
 	srv := http.Server{
-		Addr: ":" + strconv.Itoa(port),
+		Addr: host,
 		Handler: &httpKVAPI{
 			store:       kv,
 			confChangeC: confChangeC,
