@@ -1,4 +1,4 @@
-$ORG_PATH="github.com/coreos"
+$ORG_PATH="github.com/branthz"
 $REPO_PATH="$ORG_PATH/etcd"
 $PWD = $((Get-Item -Path ".\" -Verbose).FullName)
 $FSROOT = $((Get-Location).Drive.Name+":")

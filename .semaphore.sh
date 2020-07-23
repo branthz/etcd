@@ -9,7 +9,7 @@ fi
 
 docker run \
 	--rm \
-	--volume=`pwd`:/go/src/github.com/coreos/etcd \
+	--volume=`pwd`:/go/src/github.com/branthz/etcd \
 	gcr.io/etcd-development/etcd-test:go1.9.3 \
 	/bin/bash -c "${TEST_OPTS} ./test 2>&1 | tee test-${TEST_SUFFIX}.log"
 

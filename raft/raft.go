@@ -767,6 +767,7 @@ func (r *raft) poll(id uint64, t pb.MessageType, v bool) (granted int) {
 	return granted
 }
 
+//大写Step作为通用消息处理入口，部分消息类型才进入小写step分角色
 func (r *raft) Step(m pb.Message) error {
 	// Handle the message term, which may result in our stepping down to a follower.
 	switch {
@@ -1229,6 +1230,7 @@ func (r *raft) handleAppendEntries(m pb.Message) {
 	}
 }
 
+//follower处理心跳消息，提取leader的commit日志索引；返回MsgHeartbeatResp
 func (r *raft) handleHeartbeat(m pb.Message) {
 	r.raftLog.commitTo(m.Commit)
 	r.send(pb.Message{To: m.From, Type: pb.MsgHeartbeatResp, Context: m.Context})

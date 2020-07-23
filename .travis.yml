@@ -1,5 +1,5 @@
 language: go
-go_import_path: github.com/coreos/etcd
+go_import_path: github.com/branthz/etcd
 
 sudo: required
 
@@ -58,7 +58,7 @@ script:
     case "${TARGET}" in
       amd64)
         docker run --rm \
-          --volume=`pwd`:/go/src/github.com/coreos/etcd gcr.io/etcd-development/etcd-test:go1.9.3 \
+          --volume=`pwd`:/go/src/github.com/branthz/etcd gcr.io/etcd-development/etcd-test:go1.9.3 \
           /bin/bash -c "GOARCH=amd64 ./test"
         ;;
       amd64-go-tip)
@@ -66,23 +66,23 @@ script:
         ;;
       darwin-amd64)
         docker run --rm \
-          --volume=`pwd`:/go/src/github.com/coreos/etcd gcr.io/etcd-development/etcd-test:go1.9.3 \
+          --volume=`pwd`:/go/src/github.com/branthz/etcd gcr.io/etcd-development/etcd-test:go1.9.3 \
           /bin/bash -c "GO_BUILD_FLAGS='-a -v' GOOS=darwin GOARCH=amd64 ./build"
         ;;
       windows-amd64)
         docker run --rm \
-          --volume=`pwd`:/go/src/github.com/coreos/etcd gcr.io/etcd-development/etcd-test:go1.9.3 \
+          --volume=`pwd`:/go/src/github.com/branthz/etcd gcr.io/etcd-development/etcd-test:go1.9.3 \
           /bin/bash -c "GO_BUILD_FLAGS='-a -v' GOOS=windows GOARCH=amd64 ./build"
         ;;
       386)
         docker run --rm \
-          --volume=`pwd`:/go/src/github.com/coreos/etcd gcr.io/etcd-development/etcd-test:go1.9.3 \
+          --volume=`pwd`:/go/src/github.com/branthz/etcd gcr.io/etcd-development/etcd-test:go1.9.3 \
           /bin/bash -c "GOARCH=386 PASSES='build unit' ./test"
         ;;
       *)
         # test building out of gopath
         docker run --rm \
-          --volume=`pwd`:/go/src/github.com/coreos/etcd gcr.io/etcd-development/etcd-test:go1.9.3 \
+          --volume=`pwd`:/go/src/github.com/branthz/etcd gcr.io/etcd-development/etcd-test:go1.9.3 \
           /bin/bash -c "GO_BUILD_FLAGS='-a -v' GOARCH='${TARGET}' ./build"
         ;;
     esac
