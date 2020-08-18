@@ -39,6 +39,8 @@ var (
 	LocalConfig localConfig
 )
 
+//其实外部交互就两种，控制流和数据流：配置变更，数据提交
+//代码里通过channel作为入口
 func main() {
 	flag.StringVar(&configPath, "c", "./conf.toml", "config path")
 	flag.Parse()
